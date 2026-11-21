@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.py[cod]
+.env
+*.db
+*.sqlite
+*.sqlite3
+health_records.json
