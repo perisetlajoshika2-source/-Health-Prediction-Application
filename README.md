@@ -10,16 +10,50 @@ Streamlit CRUD web application for patient blood-test records and AI-assisted sc
 - Manage Patients: edit or delete records
 - Patient History: search records by name, email, or patient ID
 
-## Run
+## Run in VS Code
+
+1. Open VS Code.
+2. Select **File > Open Folder** and open `C:\Users\naren\health-prediction-app`.
+3. Open a terminal in VS Code with **Terminal > New Terminal**.
+4. Move to the project folder:
+
+```powershell
+cd C:\Users\naren\health-prediction-app
+```
+
+5. Create a virtual environment if `.venv` does not already exist:
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-streamlit run app.py
 ```
 
-Open the local URL shown by Streamlit, normally http://localhost:8501.
+6. Activate the virtual environment:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+If Windows shows an execution-policy error, allow scripts only for the current terminal session:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+7. Install dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+8. Start the application on port 8502:
+
+```powershell
+python -m streamlit run app.py --server.port 8502
+```
+
+9. Open http://localhost:8502.
+
+To stop the application, press `Ctrl+C` in the VS Code terminal.
 
 ## External AI API
 
